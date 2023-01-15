@@ -1,20 +1,19 @@
-//sa se calculeze, folosind instructiunea while, suma primelor n numere pare.
-
-// n = 4; 
-//suma: 2+4+6+8= 20;
+//sa se calculeze, folosind instructiunea while, suma primelor n numere pare numere pare
 
 
-const limita = 8;
+
+let n = 6;
 let suma = 0;
-let par = 0;
+let par = 2;
 
-while( par < limita) {
+while( n > 0) {
    
-    par = par + 2;
     suma = suma + par;
+    par = par + 2;
+    n = n - 1;
  
 }
-console.log("Suma primelor 4 numere pare este: ", suma);
+console.log("Suma numerelor pare este: ", suma);
 
 
 
