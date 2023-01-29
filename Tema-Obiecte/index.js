@@ -59,7 +59,8 @@ console.log(car);
  Obiectul returnat de funcția va avea km injumatatiti, iar prețul cu 50% mai mare. */
 
 
-function TuneCar(dest, sursa) {
+function TuneCar(sursa) {
+    const dest = {};
     for (const key in sursa)
         {
         const valoare = sursa[key];
@@ -70,8 +71,8 @@ function TuneCar(dest, sursa) {
     return dest;
 }
 
-const car2 = {};
-TuneCar(car2, car);
+const car2 = TuneCar(car);
+
 
 console.log({car, car2});
 
@@ -87,14 +88,15 @@ const hours = time.getHours() ;
 const minutes = time.getMinutes()  ;   
 const seconds = time.getSeconds() ; 
 
+function numberWithZero(number){
+    if(number <=9 ){
+      return "0" + number;
+    }
+    return number;
+  }
 
-if (seconds <= 9 ) {
-    console.log("Este ora: ", hours + ":" + minutes + ":" + '0' + seconds);
-} else if (minutes <= 9) {
-    console.log("Este ora: ", hours + ":" + '0' + minutes + ":" + seconds);
-} else {
-    console.log("Este ora: ", hours + ":" + minutes + ":" + seconds);
-}
+
+    console.log("Este ora: ", hours + ":" + numberWithZero(minutes) + ":" + numberWithZero(seconds));
 
 
 
@@ -110,12 +112,10 @@ const curr_minutes = day.getMinutes();
 const curr_seconds = day.getSeconds();
 
 
-if ( curr_month <= 9) {
-    console.log('0' + curr_month + "." + curr_day + "." + curr_year + ", " + curr_hours + ":" + curr_minutes + ":" + curr_seconds);
-} else {
 
-    console.log(curr_month + "." + curr_day + "." + curr_year + ", " + curr_hours + ":" + curr_minutes + ":" + curr_seconds);
-};
+
+    console.log(numberWithZero(curr_month) + "." + curr_day + "." + curr_year + ", " + curr_hours + ":" + numberWithZero (curr_minutes )+ ":" + numberWithZero (curr_seconds));
+
 
 
 
