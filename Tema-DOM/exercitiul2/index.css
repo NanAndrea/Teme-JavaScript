@@ -1,0 +1,80 @@
+html,
+body {
+    margin: 0;
+    padding: 1rem;
+}
+
+.container {
+    width: 360px;
+    height: 250px;
+    border: 1px solid #495057;
+    border-radius: 16px;
+
+    margin:auto;
+    
+    background-color: #ADB5BD;
+
+    
+}
+
+
+.display-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    
+    
+}
+
+
+input:focus {
+    border: 1px solid #ADB5BD;
+}
+
+
+.buttons {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   padding-top: 3.5rem;
+    
+    
+}
+.add, .substract, .multiply, .divide {
+
+   
+    border-radius: 8px;
+    
+    
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+   
+}
+
+.add:hover, .substract:hover, .multiply:hover, .divide:hover {
+    transform: scale(0.9);
+    background-color: #E5989B;
+   
+}
+
+
+
+h5 {
+    text-align: center;
+    
+}
+
+.error-message {
+    color: #FF0054;
+    text-align: center;
+    
+}
+
+.result{
+    text-align: center;
+    
+}
+
+
